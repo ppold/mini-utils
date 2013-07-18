@@ -1,6 +1,6 @@
 {
-  "name": "goodies",
-  "version": "1.0.0",
+  "name": "mini-utils",
+  "version": "1.0.1",
   "ignore": [
     "**/.*",
     "node_modules",
