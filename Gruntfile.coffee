@@ -18,7 +18,7 @@ module.exports = (grunt) ->
         cwd: '<%= coffee.compile.dest %>'
         src: ['**/*.js']
         dest: ''
-        ext: '.min.js'
+        ext: '.js'
     clean: ["<%= coffee.compile.dest %>"]
     buster:
       app: {}
