@@ -3,6 +3,70 @@ define ->
    * DOM utilities
   ###
 
+  class ClassList
+    parse_classes = (element) ->
+      return element.className.split(/\s+/)
+
+    _contains = (element, className) ->
+      return parse_classes(element).indexOf(className) isnt -1
+
+    _add = (element, className) ->
+      element.className += ' ' + className
+
+    _remove = (element, classes, index) ->
+      element.className = classes.splice(index, 1).join(' ')
+
+    constructor: (element) ->
+      this.element = element
+      this.classList = element.classList
+
+    contains: (className) ->
+      classList = @classList
+      if classList
+        return classList.contains(className)
+      else
+        return _contains(@element, className)
+
+    add: (className) ->
+      classList = @classList
+      if classList
+        classList.add(className)
+      else
+        element = @element
+        unless _contains(element, className)
+          _add(element, className)
+
+      return this
+
+    remove: (className) ->
+      classList = @classList
+      if classList
+        classList.remove(className)
+      else
+        element = @element
+        classes = parse_classes(element)
+        classNameIndex = classes.indexOf(className)
+        if classNameIndex isnt -1
+          _remove(element, classes, classNameIndex)
+
+      return this
+
+    toggle: (className) ->
+      classList = @classList
+      if classList
+        classList.toggle(className)
+      else
+        element = @element
+        classes = parse_classes(element)
+        classNameIndex = classes.indexOf(className)
+        if classNameIndex is -1
+          add_class(element, className)
+        else
+          _remove(element, classes, classNameIndex)
+
+    item: (index) ->
+      return parse_classes(@element).filter((i) -> i)[index]
+
   ###
    * Easy way to access an element's dataset when available
   ###
@@ -122,7 +186,7 @@ define ->
     )
 
   return {
-    listen, unlisten, qsa,
+    ClassList, listen, unlisten, qsa,
     remove_itself, element_is_empty,
     insert_before, insert_after, replace,
     from_dataset, in_dataset, permits_element
