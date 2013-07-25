@@ -1,2 +1,2 @@
-/*! Mini-utils 2013-07-18 */
+/*! Mini-utils 2013-07-25 */
 define(function(){var a,b,c,d,e,f;for(c=window,f=["ms","moz","webkit","o"],d=0,e=f.length;e>d&&(b=f[d],!c.requestAnimationFrame);d++)c.requestAnimationFrame=c[b+"RequestAnimationFrame"],c.cancelAnimationFrame=c[b+"CancelAnimationFrame"]||c[b+"CancelRequestAnimationFrame"];return a=0,c.requestAnimationFrame||(c.requestAnimationFrame=function(b){var d;return a=Math.max(a+16,d=+new Date),c.setTimeout(function(){return b(+new Date)},a-d)}),c.cancelAnimationFrame||(c.cancelAnimationFrame=function(a){return clearTimeout(a)}),null});
