@@ -1,10 +1,9 @@
 {
   "name": "mini-utils",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "ignore": [
     "**/.*",
     "node_modules",
-    "components",
     "bower_components",
     "test",
     "tests",
