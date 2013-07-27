@@ -1,2 +1,0 @@
-/*! Mini-utils 2013-07-26 */
-define(function(){var a,b;return a=[],b=function(a){var b,c,d,e,f,g,h;return h=a.target,f=a.range,c=a.callback,g=a.status,b=h.getBoundingClientRect(),d=-b.top/(b.height-window.innerHeight),e=f.from<d&&d<f.to,e!==g?(a.status=e,c(e)):void 0},window.addEventListener("scroll",function(){return a.forEach(b)}),function(b,c,d){return a.push({target:b,range:c,callback:d,status:null}),d}});

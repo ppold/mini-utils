@@ -14,6 +14,11 @@ define ->
     add: (slot) ->
       @slots.push(slot)
 
+    remove: (slot) ->
+      index = @slots.indexOf(slot)
+      if index isnt -1
+        @slots.splice(index, 1)
+
     ###
      * Dispatches the signal to all the added slots
      * @param  {arguments} @values... List of arguments to send
