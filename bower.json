@@ -1,12 +1,12 @@
 {
-  "name": "mini-utils",
-  "version": "1.2.2",
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests",
-    "src"
-  ]
+	"name": "mini-utils",
+	"version": "1.2.3",
+	"ignore": [
+		"**/.*",
+		"node_modules",
+		"bower_components",
+		"test",
+		"tests",
+		"src"
+	]
 }
