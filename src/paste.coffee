@@ -1,4 +1,4 @@
-define(['./promise', './dommy', 'polyfills/raf'], (Promise, dommy) ->
+define(['./promise', './dommy', './raf'], (Promise, dommy) ->
   {remove_itself, remove_new_lines} = dommy
 
   ###
