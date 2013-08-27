@@ -1,10 +1,6 @@
 {
 	"name": "mini-utils",
-<<<<<<< HEAD
-	"version": "1.2.4",
-=======
-	"version": "1.2.3",
->>>>>>> ba94a707a9d2e7ffeebb67989a7c1d286982325b
+	"version": "1.2.5",
 	"ignore": [
 		"**/.*",
 		"node_modules",

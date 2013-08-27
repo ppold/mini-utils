@@ -99,11 +99,11 @@ define ->
       return this
 
     select_node: (node) ->
-      @_range.selectNode()
+      @_range.selectNode(node)
       return this
 
     select_node_contents: (node) ->
-      @_range.selectNodeContents()
+      @_range.selectNodeContents(node)
       return this
 
     collapse: (where) ->
