@@ -1,2 +1,2 @@
-/*! Mini-utils 2013-08-23 */
+/*! Mini-utils 2013-08-27 */
 define(function(){var a,b;return b={},a={},{register:function(a,c,d){var e;return null==d&&(d="default"),e=b[d]||(b[d]=[]),e.push({input:a,fn:c})},validate:function(c){var d,e,f,g,h,i,j,k;for(null==c&&(c="default"),h=b[c],console.log("validating group:",h),f=[],j=0,k=h.length;k>j;j++)d=h[j],i=d.input,g=d.fn,e=g(i),e&&f.push({input:i,error:e});return a[c]=f,0===f.length},errors:function(b){return null==b&&(b="default"),a[b]}}});
