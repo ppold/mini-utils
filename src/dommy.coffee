@@ -14,7 +14,8 @@ define ->
       element.className += ' ' + className
 
     _remove = (element, classes, index) ->
-      element.className = classes.splice(index, 1).join(' ')
+      classes.splice(index, 1)
+      element.className = classes.join(' ')
 
     constructor: (element) ->
       this.element = element
