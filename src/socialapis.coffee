@@ -9,7 +9,8 @@ define ->
     sdkScript.async = yes
     firstScript.parentNode.insertBefore(sdkScript, firstScript)
 
-  add_script('facebook-jssdk', '//connect.facebook.net/es_LA/all.js#xfbml=1')
-  add_script('twitter-wjs', '//platform.twitter.com/widgets.js')
+  configure = (fbAppId) ->
+    add_script('facebook-jssdk', '//connect.facebook.net/es_LA/all.js#xfbml=1&appId='+fbAppId)
+    add_script('twitter-wjs', '//platform.twitter.com/widgets.js')
 
-  return null
+  return { configure }
