@@ -1,2 +1,2 @@
-/*! Mini-utils 2013-11-26 */
+/*! Mini-utils 2013-11-27 */
 define(function(){var a,b;return a=function(a,b){var c,d,e;return d=document,c=d.getElementsByTagName("script")[0],d.getElementById(a)?void 0:(e=d.createElement("script"),e.id=a,e.src=b,e.async=!0,c.parentNode.insertBefore(e,c))},b=function(b){return a("facebook-jssdk","//connect.facebook.net/es_LA/all.js#xfbml=1&appId="+b),a("twitter-wjs","//platform.twitter.com/widgets.js")},{configure:b}});

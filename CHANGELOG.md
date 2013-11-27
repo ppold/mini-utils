@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.2.7 - 2013-11-27
+
+- Visibility util added.
+
 ## 1.2.6 - 2013-11-26
 
 - Social util modified, now it asks for a Facebook App Id.
