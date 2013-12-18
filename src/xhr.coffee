@@ -34,6 +34,9 @@ define(['./promise'], (Promise) ->
   post = (url, data, headers) ->
     xhr(url, data, headers, 'POST')
 
+  put = (url, data, headers) ->
+    xhr(url, data, headers, 'PUT')
+
   calls = 0
   jsonp = (url) ->
     promise = new Promise()
@@ -62,6 +65,6 @@ define(['./promise'], (Promise) ->
       delete window[callbackID]
 
   return {
-    get, options, post, jsonp
+    get, options, post, put, jsonp
   }
 )

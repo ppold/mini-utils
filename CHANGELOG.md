@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.0 - 2013-12-18
+
+- Add PUT method to XHR utility.
+
 ## 1.2.7 - 2013-11-27
 
 - Visibility util added.

@@ -1,2 +1,2 @@
-/*! Mini-utils 2013-11-27 */
+/*! Mini-utils 2013-12-18 */
 define(function(){var a;return a=function(a,b){var c;return b=b||{bubbles:!1,cancelable:!1,detail:void 0},c=document.createEvent("CustomEvent"),c.initCustomEvent(a,b.bubbles,b.cancelable,b.detail),c},a.prototype=window.CustomEvent.prototype,window.CustomEvent=a,a});
