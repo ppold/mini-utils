@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.1 - 2014-02-05
+
+- Change ordering of JSONP call.
+
 ## 1.3.0 - 2013-12-18
 
 - Add PUT method to XHR utility.

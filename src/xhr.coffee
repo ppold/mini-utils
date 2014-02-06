@@ -42,9 +42,10 @@ define(['./promise'], (Promise) ->
     promise = new Promise()
 
     callbackID = 'jsonp_callback'+(++calls)
+    window[callbackID] = generate_closure(callbackID, script, promise)
+
     url += '&callback=' + callbackID
     script = add_script_tag(url)
-    window[callbackID] = generate_closure(callbackID, script, promise)
 
     return promise
 
@@ -66,5 +67,4 @@ define(['./promise'], (Promise) ->
 
   return {
     get, options, post, put, jsonp
-  }
-)
+  })
