@@ -1,6 +1,10 @@
 # Changelog
 
-## 1.3.2 - 2014-02-05
+## 1.3.3 - 2014-02-06
+
+- Return 'responseText' instead of 'response'.
+
+## 1.3.2 - 2014-02-06
 
 - Optimize JSONP call.
 

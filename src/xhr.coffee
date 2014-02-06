@@ -10,7 +10,7 @@ define(['./promise'], (Promise) ->
     handler = (event) ->
       if request.readyState is 4
         request.removeEventListener(event.type, handler)
-        promise.resolve(request.status, request.response)
+        promise.resolve(request.status, request.responseText)
 
     promise = new Promise()
 
