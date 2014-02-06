@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.3.2 - 2014-02-05
+
+- Optimize JSONP call.
+
 ## 1.3.1 - 2014-02-05
 
 - Change ordering of JSONP call.

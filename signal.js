@@ -1,2 +1,2 @@
-/*! Mini-utils 2014-02-05 */
+/*! Mini-utils 2014-02-06 */
 var __slice=[].slice;define(function(){var a;return a=function(){function a(){this.slots=[],this.slotsOnce=[]}return a.prototype.add=function(a){var b;return b=this.slotsOnce.indexOf(a),b>-1&&this.slotsOnce.splice(b,1),this.slots.push(a)},a.prototype.addOnce=function(a){var b;return b=this.slots.indexOf(a),b>-1&&this.slots.splice(b,1),this.slotsOnce.push(a)},a.prototype.remove=function(a){var b;return b=this.slots.indexOf(a),-1!==b?this.slots.splice(b,1):void 0},a.prototype.dispatch=function(){var a,b,c,d,e;for(b=1<=arguments.length?__slice.call(arguments,0):[],this.values=b,e=this.slots.concat(this.slotsOnce),c=0,d=e.length;d>c;c++)a=e[c],a.apply(null,this.values);return this.slotsOnce.length=0},a}()});

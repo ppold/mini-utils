@@ -42,25 +42,26 @@ define(['./promise'], (Promise) ->
     promise = new Promise()
 
     callbackID = 'jsonp_callback'+(++calls)
-    window[callbackID] = generate_closure(callbackID, script, promise)
-
     url += '&callback=' + callbackID
-    script = add_script_tag(url)
+    script = create_script_tag(url)
+    generate_closure(callbackID, script, promise)
+    append_to_head(script)
 
     return promise
 
-  add_script_tag = (url) ->
+  append_to_head = (el) ->
     head = document.getElementsByTagName('head')[0]
+    head.appendChild(el)
+
+  create_script_tag = (url) ->
     script = document.createElement('script')
     script.async = yes
     script.type = 'application/javascript'
     script.src = url
-    head.appendChild(script)
-
     return script
 
   generate_closure = (callbackID, script, promise) ->
-    return (data) ->
+    window[callbackID] = (data) ->
       script.parentNode.removeChild(script)
       promise.resolve(data)
       delete window[callbackID]
